@@ -21,26 +21,26 @@ public class SubjectDAO {
 	}
 
 	public int getSubjectScoreSum(String division) {//sql문 수정 필요 sum으로
-		String sqlStatement = "select sum(score) from subjects where division = ?";
+		String sqlStatement = "select sum(score) from subjectB where division = ?";
 		return jdbcTemplateObject.queryForObject(sqlStatement,new Object[]{division}, 
 				Integer.class);
 	}
 	
 	public int getSubjectCount(int year, int grade) {
-		String sqlStatement = "select sum(score) from subjects where year = ? and grade = ?";
+		String sqlStatement = "select sum(score) from subjectB where year = ? and grade = ?";
 		return jdbcTemplateObject.queryForObject(sqlStatement,new Object[]{year, grade}, 
 				Integer.class);
 	}
 
 	// querying and returning a single object
 	public Subject getSubject(String name) {
-		String sqlStatement = "select * from subjects where name=?";
+		String sqlStatement = "select * from subjectB where name=?";
 
 		return jdbcTemplateObject.queryForObject(sqlStatement, new Object[] { name }, new SubjectMapper());
 	}
 	
 	public List<Subject> getSubject(int year, int grade) {
-		String sqlStatement = "select * from subjects where year=? and grade=?";
+		String sqlStatement = "select * from subjectB where year=? and grade=?";
 
 		return jdbcTemplateObject.query(sqlStatement, new Object[] { year, grade }, new SubjectMapper());
 	}
@@ -48,7 +48,7 @@ public class SubjectDAO {
 
 	// querying and returning multiple object
 	public List<Subject> getSubject() {
-		String sqlStatement = "select * from subjects";
+		String sqlStatement = "select * from subjectB";
 
 		return jdbcTemplateObject.query(sqlStatement, new SubjectMapper());
 	}
