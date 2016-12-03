@@ -23,8 +23,8 @@ public class SubjectController {
 	@RequestMapping("/grade")
 	public String showOffers(Model model) {
 
-		Integer a = subjectService.getSubjectCountName(2012, 1);
-		Integer b = subjectService.getSubjectCountName(2012, 2);
+		Integer a = subjectService.getSubjectCountName(2014, 1);
+		Integer b = subjectService.getSubjectCountName(2014, 2);
 		Integer c = subjectService.getSubjectCountName(2015, 1);
 		Integer d = subjectService.getSubjectCountName(2015, 2);
 		Integer e = subjectService.getSubjectCountName(2016, 1);
@@ -81,7 +81,7 @@ public class SubjectController {
 	@RequestMapping("/YearA")
 	public String YearA(Model model) {
 
-		List<Subject> subject = subjectService.getCurrunt(2012, 1);
+		List<Subject> subject = subjectService.getCurrunt(2014, 1);
 		
 		model.addAttribute("subject", subject);
 		
@@ -91,7 +91,7 @@ public class SubjectController {
 	@RequestMapping("/YearB")
 	public String YearB(Model model) {
 
-		List<Subject> subject = subjectService.getCurrunt(2012, 2);
+		List<Subject> subject = subjectService.getCurrunt(2014, 2);
 		
 		model.addAttribute("subject", subject);
 		

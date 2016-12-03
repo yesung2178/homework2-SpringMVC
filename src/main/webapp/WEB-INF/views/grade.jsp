@@ -30,7 +30,7 @@ table, tr, th, td {
 
 		<tr>
 
-			<td>2012</td>
+			<td>2014</td>
 			<td>1</td>
 			<td>${a}</td>
 			<td><a href="${pageContext.request.contextPath}/YearA"> 링크 </a></td>
@@ -39,7 +39,7 @@ table, tr, th, td {
 		
 		<tr>
 
-			<td>2012</td>
+			<td>2014</td>
 			<td>2</td>
 			<td>${b}</td>
 			<td><a href="${pageContext.request.contextPath}/YearB"> 링크 </a></td>
